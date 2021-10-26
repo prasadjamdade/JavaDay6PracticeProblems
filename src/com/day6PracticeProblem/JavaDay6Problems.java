@@ -4,21 +4,18 @@ import java.util.*;
 public class JavaDay6Problems {
     public static void main(String[] args) {
         JavaDay6Problems methodCaller = new JavaDay6Problems();
-        methodCaller.fibonacciSeries();
+        methodCaller.reverseNumber();
     }
-    public void fibonacciSeries() {
-        Scanner fibonacciLengthInput = new Scanner(System.in);
-        System.out.println("Please enter the length of Fibonacci Series want to print for.");
-        int fibonacciInput =  fibonacciLengthInput.nextInt();
-        int number01 = 0;
-        int number02 = 1;
-        System.out.print(number01 + " + " + number02 + " + ");
-        for(int i=0;i < fibonacciInput-2;i++){
-            int number03 = number01 + number02;
-            System.out.print(" + "+number03);
-            number01 = number02;
-            number02 =  number03;
+    public void reverseNumber() {
+        Scanner reverseNumberInput = new Scanner(System.in);
+        System.out.println("Please enter an Integer number to reverse.");
+        int userInput =  reverseNumberInput.nextInt();
+        int reversedNumber = 0;
+        while (userInput != 0) {
+            int lastDigit = userInput % 10;
+            reversedNumber = (reversedNumber * 10) + lastDigit;
+            userInput = userInput / 10;
         }
-
+        System.out.println("The reversed number is " + reversedNumber);
     }
 }

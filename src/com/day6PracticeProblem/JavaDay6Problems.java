@@ -9,14 +9,9 @@ public class JavaDay6Problems {
 
     public static void main(String[] args) {
         JavaDay6Problems methodCaller = new JavaDay6Problems();
-        methodCaller.swSimulator();
-    }
-
-    public void swSimulator() {
-        JavaDay6Problems commonObject = new JavaDay6Problems();
-        commonObject.startMethod();
-        commonObject.stopMethod();
-        commonObject.printMethod();
+        methodCaller.startMethod();
+        methodCaller.stopMethod();
+        methodCaller.printMethod();
     }
 
     private void startMethod() {
@@ -42,8 +37,8 @@ public class JavaDay6Problems {
     }
 
     private void printMethod() {
-        double timeInSeconds = ((stopTime - startTime)/1000);
-        System.out.println("Time in seconds is: " + timeInSeconds+" s");
+        double timeInSeconds = ((stopTime - startTime) / 1000);
+        System.out.println("Time in seconds is: " + timeInSeconds + " s");
     }
 }
 

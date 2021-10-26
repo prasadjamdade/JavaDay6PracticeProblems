@@ -2,6 +2,7 @@ package com.day6PracticeProblem;
 import java.util.*;
 
 public class JavaDay6Problems {
+    int flag;
     public static void main(String[] args) {
         JavaDay6Problems methodCaller = new JavaDay6Problems();
         methodCaller.fibonacciSeries();
@@ -9,16 +10,16 @@ public class JavaDay6Problems {
     public void fibonacciSeries() {
         Scanner fibonacciLengthInput = new Scanner(System.in);
         System.out.println("Please enter the length of Fibonacci Series want to print for.");
-        int fibonacciInput =  fibonacciLengthInput.nextInt();
-        int number01 = 0;
-        int number02 = 1;
-        System.out.print(number01 + " + " + number02 + " + ");
-        for(int i=0;i < fibonacciInput-2;i++){
-            int number03 = number01 + number02;
-            System.out.print(" + "+number03);
-            number01 = number02;
-            number02 =  number03;
+        int primeInput =  fibonacciLengthInput.nextInt();
+        for (int i = 3; i < primeInput; i++) {
+            if (primeInput % i == 0) {
+                flag = 1;
+                break;
+            }
         }
-
+        if (flag == 1) {
+            System.out.println("Not Prime number");
+        } else
+            System.out.println("Prime");
     }
 }
